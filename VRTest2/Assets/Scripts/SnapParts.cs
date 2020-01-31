@@ -15,9 +15,16 @@ public class SnapParts : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<Rigidbody>().useGravity = false;
-        other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        Rigidbody rigid = other.GetComponent<Rigidbody>();
+        if(rigid == null)
+        {
+            Debug.LogError("Rigidbodyがアタッチされていません");
+            return;
+        }
+        rigid.useGravity = false;
+        rigid.constraints = RigidbodyConstraints.FreezeAll;
         other.transform.position = this.transform.position;
-        other.transform.rotation = Quaternion.Euler(30,0,0);
+        other.transform.rotation = this.transform.rotation;
+        other.GetComponent<Collider>().enabled = false;
     }
 }
