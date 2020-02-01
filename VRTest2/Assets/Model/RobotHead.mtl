@@ -1,9 +1,6 @@
 newmtl Robot_Color
 map_Kd Robot_Color.tga
+bump Robot_Normal.tga
 Kd 1 1 1
-d 1
-
-newmtl BodyColor
-Kd 0.3882353 0.372549 0.3686274
 d 1
 
