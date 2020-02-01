@@ -47,23 +47,29 @@ public class CreateParts : MonoBehaviour
         }
     }
 
-    public void SetParts()
+    public GameObject SetParts()
     {
         if(_objectList.Count <= 0)
         {
-            return;
+            return null;
         }
         GameObject obj = _objectList[0];
         obj.SetActive(true);
         _objectList.Remove(obj);
+
+        return obj;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        //if(Input.GetKeyDown(KeyCode.A))
+        //{
+        //    SetParts();
+        //}
+        if(_objectList.Count == 0)
         {
-            SetParts();
+            Init();
         }
     }
 }
