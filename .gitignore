@@ -34,3 +34,15 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+/VRTest2/Oculus.VR.Editor.csproj
+/VRTest2/Oculus.VR.Scripts.Editor.csproj
+/VRTest2/SteamVR.csproj
+/VRTest2/SteamVR_Actions.csproj
+/VRTest2/SteamVR_Editor.csproj
+/VRTest2/SteamVR_Input_Editor.csproj
+/VRTest2/SteamVR_Windows_EditorHelper.csproj
+/VRTest2/Assembly-CSharp.csproj
+/VRTest2/Assembly-CSharp-Editor.csproj
+/VRTest2/Assembly-CSharp-Editor-firstpass.csproj
+/VRTest2/Assembly-CSharp-firstpass.csproj
+/VRTest2/Oculus.VR.csproj

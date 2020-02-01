@@ -12,8 +12,6 @@
         Cull off
         Blend SrcAlpha OneMinusSrcAlpha
 
-        Offset - 1 , -1
-
         Pass
         {
             CGPROGRAM
