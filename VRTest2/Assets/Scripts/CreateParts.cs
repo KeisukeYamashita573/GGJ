@@ -19,18 +19,21 @@ public class CreateParts : MonoBehaviour
 
     private void Init()
     {
+        // カウント用のリストを作成
         List<GameObject>_list = new List<GameObject>();
         _objectList = new List<GameObject>();
         foreach (GameObject prefab in _prefabList)
         {
             for (int i = 0; i < _count; i++)
             {
+                // 固定数作成する
                 GameObject obj = Instantiate(prefab,transform.position,prefab.transform.rotation);
                 obj.SetActive(_active);
                 obj.name = prefab.name;
                 _list.Add(obj);
             }
         }
+        // ランダムにリストに格納する
         for (int i = 0; i < _list.Count;)
         {
             int rad = Random.Range(0, _list.Count);
@@ -52,7 +55,7 @@ public class CreateParts : MonoBehaviour
         }
         GameObject obj = _objectList[0];
         obj.SetActive(true);
-        //_objectList.Remove(obj);
+        _objectList.Remove(obj);
     }
 
     // Update is called once per frame
