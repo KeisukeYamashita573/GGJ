@@ -23,8 +23,11 @@ public class SnapParts : MonoBehaviour
         }
         rigid.useGravity = false;
         rigid.constraints = RigidbodyConstraints.FreezeAll;
+        // 座標位置と回転を一致させる
         other.transform.position = this.transform.position;
         other.transform.rotation = this.transform.rotation;
         other.GetComponent<Collider>().enabled = false;
+        // 自身の当たり判定の無効化
+        this.GetComponent<Collider>().enabled = false;
     }
 }
