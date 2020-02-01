@@ -35,15 +35,13 @@ public class DebugGizmos : MonoBehaviour
         Vector3 offset = Vector3.zero;
         Vector3 size = Vector3.one;
         float radius = 0.5f;
-        BoxCollider box = GetComponent<BoxCollider>();
-        SphereCollider sphere = GetComponent<SphereCollider>();
-        // 当たり判定の位置と大きさに合わせる
-        if(box != null)
+        // 当たり判定の大きさと合わせる
+        if(TryGetComponent(out BoxCollider box))
         {
             offset = box.center;
             size = box.size;
         }
-        if(sphere != null)
+        if(TryGetComponent(out SphereCollider sphere))
         {
             radius = sphere.radius;
         }

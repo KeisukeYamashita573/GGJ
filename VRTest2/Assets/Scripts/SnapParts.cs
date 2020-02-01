@@ -15,8 +15,7 @@ public class SnapParts : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Rigidbody rigid = other.GetComponent<Rigidbody>();
-        if(rigid == null)
+        if(!other.TryGetComponent(out Rigidbody rigid))
         {
             Debug.LogError("Rigidbodyがアタッチされていません");
             return;
@@ -26,8 +25,11 @@ public class SnapParts : MonoBehaviour
         // 座標位置と回転を一致させる
         other.transform.position = this.transform.position;
         other.transform.rotation = this.transform.rotation;
-        other.GetComponent<Collider>().enabled = false;
+        other.enabled = false;
         // 自身の当たり判定の無効化
-        this.GetComponent<Collider>().enabled = false;
+        if(TryGetComponent(out Collider collider))
+        {
+            collider.enabled = false;
+        }
     }
 }
