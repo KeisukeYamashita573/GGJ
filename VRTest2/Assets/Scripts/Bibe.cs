@@ -10,7 +10,7 @@ public class Bibe : MonoBehaviour
         byte[] sample = new byte[8];
         for (int i = 0; i < sample.Length; i++)
         {
-            sample[i] = 128;
+            sample[i] = 255;
         }
         hapticsClip = new OVRHapticsClip(sample, sample.Length);
         
