@@ -1,0 +1,9 @@
+newmtl Robot_Color
+map_Kd Robot_Color.tga
+Kd 1 1 1
+d 1
+
+newmtl Gray
+Kd 0.2784314 0.2823529 0.3137255
+d 1
+

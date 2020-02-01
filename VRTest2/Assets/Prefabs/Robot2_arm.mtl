@@ -1,6 +1,0 @@
-newmtl Robot_Color
-map_Kd Robot_Color.tga
-bump Robot_Normal.tga
-Kd 1 1 1
-d 1
-
