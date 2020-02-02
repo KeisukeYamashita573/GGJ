@@ -27,11 +27,13 @@ public class PartsAssembly : MonoBehaviour
     private void OnDestroy()
     {
         SetPoint();
+        if (_robot == null || _container == null) return;
         _robot.transform.parent = _container.transform;
     }
 
     private void SetPoint()
     {
+        if (_robot == null) return;
         _robot.transform.rotation = Quaternion.Euler(0, 0, 0);
         foreach (Transform child in _robot.transform)
         {
@@ -94,5 +96,9 @@ public class PartsAssembly : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public int GetRepairCount {
+        get { return _repairCount;}
     }
 }
