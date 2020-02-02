@@ -37,7 +37,6 @@ public class CreateParts : MonoBehaviour
         for (int i = 0; i < _list.Count;)
         {
             int rad = Random.Range(0, _list.Count);
-            Debug.Log(rad);
             if (_list[rad] != null)
             {
                 i++;
