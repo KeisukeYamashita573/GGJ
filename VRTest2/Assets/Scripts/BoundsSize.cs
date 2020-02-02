@@ -19,7 +19,11 @@ public class BoundsSize : MonoBehaviour
     private Vector3 _size;
     public Vector3 Size
     {
-        get { return _size; }
+        get
+        {
+            _size = _renderer.bounds.size;
+            return _size;
+        }
     }
     // Start is called before the first frame update
     void Start()
