@@ -12,6 +12,7 @@ public class PartsAssembly : MonoBehaviour
     private int _repairNum = 6;
     [SerializeField]
     private GameObject _container;
+    private BoundsSize _body;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +26,55 @@ public class PartsAssembly : MonoBehaviour
 
     private void OnDestroy()
     {
+        SetPoint();
         _robot.transform.parent = _container.transform;
     }
 
+    private void SetPoint()
+    {
+        _robot.transform.rotation = Quaternion.Euler(0, 0, 0);
+        foreach (Transform child in _robot.transform)
+        {
+            if (child.TryGetComponent(out BoundsSize bounds))
+            {
+                switch (bounds._type)
+                {
+                    case BoundsSize.BODY_TYPE.HEAD:
+                        bounds.transform.localPosition = new Vector3(0, _body.Size.y / 2 + bounds.Size.y / 2, 0);
+                        break;
+                    case BoundsSize.BODY_TYPE.ARM_L:
+                        bounds.transform.localPosition = new Vector3(_body.Size.x / 2 + bounds.Size.x / 2, 0, 0);
+                        break;
+                    case BoundsSize.BODY_TYPE.ARM_R:
+                        bounds.transform.localPosition = new Vector3(-_body.Size.x / 2 - bounds.Size.x / 2, 0, 0);
+                        break;
+                    case BoundsSize.BODY_TYPE.REG_L:
+                        bounds.transform.localPosition = new Vector3(0, -_body.Size.y / 2 - bounds.Size.y / 2, 0);
+                        break;
+                    case BoundsSize.BODY_TYPE.REG_R:
+                        bounds.transform.localPosition = new Vector3(0, -_body.Size.y / 2 - bounds.Size.y / 2, 0);
+                        break;
+                    case BoundsSize.BODY_TYPE.BODY:
+                        bounds.transform.localPosition = new Vector3(0, 0, 0);
+                        Debug.LogError("入りすぎ");
+                        break;
+                    case BoundsSize.BODY_TYPE.MAX:
+                    default:
+                        break;
+                }
+            }
+        }
+    }
     public void Assembly(GameObject obj)
     {
         obj.transform.parent = _robot.transform;
+        if (obj.TryGetComponent(out BoundsSize bounds))
+        {
+            if (bounds._type == BoundsSize.BODY_TYPE.BODY)
+            {
+                _body = bounds;
+            }
+        }
         _repairCount++;
         if(_repairCount >= _repairNum)
         {

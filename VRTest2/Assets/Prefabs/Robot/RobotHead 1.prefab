@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 6174223777804195796}
   - component: {fileID: 5775925536779520313}
   - component: {fileID: 5172661971137497493}
+  - component: {fileID: 1557802543891101231}
   m_Layer: 8
   m_Name: RobotHead 1
   m_TagString: Parts
@@ -256,3 +257,16 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &1557802543891101231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157126500461011268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93465f4b7505941408aba5ade35a7860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0

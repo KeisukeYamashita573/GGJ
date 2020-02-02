@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 8814050560515740706}
   - component: {fileID: 4637425412941007395}
   - component: {fileID: 6104717805417817484}
+  - component: {fileID: 2120597121209428787}
   m_Layer: 8
   m_Name: RightArm
   m_TagString: Parts
@@ -198,3 +199,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2120597121209428787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407456986484578481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93465f4b7505941408aba5ade35a7860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0

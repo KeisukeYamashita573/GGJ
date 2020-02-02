@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1955388533089428465}
   - component: {fileID: -5708913409734740282}
   - component: {fileID: 5549741720389824984}
+  - component: {fileID: 415345093674230283}
   m_Layer: 8
   m_Name: LeftArm
   m_TagString: Parts
@@ -120,6 +121,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &415345093674230283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289728639592076604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93465f4b7505941408aba5ade35a7860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0
 --- !u!1 &2096958481165033826
 GameObject:
   m_ObjectHideFlags: 0

@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 420895381195202378}
   - component: {fileID: -4159461326288701763}
   - component: {fileID: 7500596283073284364}
+  - component: {fileID: 1722916446140821363}
   m_Layer: 8
   m_Name: RobotLegRight
   m_TagString: Parts
@@ -198,3 +199,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1722916446140821363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572248985814779485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93465f4b7505941408aba5ade35a7860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0
