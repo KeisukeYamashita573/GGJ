@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8544039143853621714}
   - component: {fileID: 2585700606482270669}
   - component: {fileID: 4418024690362790811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RobotArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,9 @@ GameObject:
   - component: {fileID: 7225677205045339456}
   - component: {fileID: 1011517519845363497}
   - component: {fileID: 8814050560515740706}
-  m_Layer: 0
+  - component: {fileID: 4637425412941007395}
+  - component: {fileID: 6104717805417817484}
+  m_Layer: 8
   m_Name: RightArm
   m_TagString: Parts
   m_Icon: {fileID: 0}
@@ -140,6 +142,62 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.8, z: 0.3}
   m_Center: {x: 0, y: -0.09, z: -0.07}
+--- !u!114 &4637425412941007395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407456986484578481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  m_materialColorField: 
+--- !u!23 &6104717805417817484
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407456986484578481}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 3ecf91c58f8ca574c9a9497f78ce219c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &7048730077822058679
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 213263185732719428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RobotArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

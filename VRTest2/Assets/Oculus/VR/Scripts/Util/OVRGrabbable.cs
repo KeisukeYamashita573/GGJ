@@ -33,7 +33,7 @@ public class OVRGrabbable : MonoBehaviour
     [SerializeField]
     protected Collider[] m_grabPoints = null;
 
-    protected float VelEnchantVal = 4.0f;
+    protected float VelEnchantVal = 3.0f;
 
     protected bool m_grabbedKinematic = false;
     protected Collider m_grabbedCollider = null;

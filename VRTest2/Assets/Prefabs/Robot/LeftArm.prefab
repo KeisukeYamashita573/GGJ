@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 669327058953114843}
   - component: {fileID: 6722607635751138278}
   - component: {fileID: 1955388533089428465}
-  m_Layer: 0
+  - component: {fileID: -5708913409734740282}
+  - component: {fileID: 5549741720389824984}
+  m_Layer: 8
   m_Name: LeftArm
   m_TagString: Parts
   m_Icon: {fileID: 0}
@@ -62,6 +64,62 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.8, z: 0.3}
   m_Center: {x: 0, y: -0.09, z: -0.07}
+--- !u!114 &-5708913409734740282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289728639592076604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  m_materialColorField: 
+--- !u!23 &5549741720389824984
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289728639592076604}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 3ecf91c58f8ca574c9a9497f78ce219c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1001 &4027137797112665765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73,6 +131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RobotArmLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9a4b448b2a931ed4e96f503d2c92050c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4302136801994204683, guid: 9a4b448b2a931ed4e96f503d2c92050c,
         type: 3}
@@ -144,6 +207,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0aa851515cd3747d6b3b3e461199a2ed, type: 2}
+    - target: {fileID: 3096964566981457863, guid: 9a4b448b2a931ed4e96f503d2c92050c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a4b448b2a931ed4e96f503d2c92050c, type: 3}
 --- !u!4 &8257896047174139327 stripped
