@@ -42,19 +42,19 @@ public class PartsAssembly : MonoBehaviour
                 switch (bounds._type)
                 {
                     case BoundsSize.BODY_TYPE.HEAD:
-                        bounds.transform.localPosition = new Vector3(0, _body.Size.y / 2 + bounds.Size.y / 2, 0);
+                        bounds.transform.localPosition = new Vector3(0, _body.Size.y / 2 + bounds.Size.y / 2 - 0.5f, 0);
                         break;
                     case BoundsSize.BODY_TYPE.ARM_L:
-                        bounds.transform.localPosition = new Vector3(_body.Size.x / 2 + bounds.Size.x / 2, 0, 0);
+                        bounds.transform.localPosition = new Vector3(_body.Size.x / 2 + bounds.Size.x / 2 - 0.2f, 0, 0);
                         break;
                     case BoundsSize.BODY_TYPE.ARM_R:
-                        bounds.transform.localPosition = new Vector3(-_body.Size.x / 2 - bounds.Size.x / 2, 0, 0);
+                        bounds.transform.localPosition = new Vector3(-_body.Size.x / 2 - bounds.Size.x / 2 + 0.2f, 0, 0);
                         break;
                     case BoundsSize.BODY_TYPE.REG_L:
-                        bounds.transform.localPosition = new Vector3(0, -_body.Size.y / 2 - bounds.Size.y / 2, 0);
+                        bounds.transform.localPosition = new Vector3(0.1f, -_body.Size.y / 2 - bounds.Size.y / 2 + 0.1f, 0);
                         break;
                     case BoundsSize.BODY_TYPE.REG_R:
-                        bounds.transform.localPosition = new Vector3(0, -_body.Size.y / 2 - bounds.Size.y / 2, 0);
+                        bounds.transform.localPosition = new Vector3(-0.1f, -_body.Size.y / 2 - bounds.Size.y / 2 + 0.1f, 0);
                         break;
                     case BoundsSize.BODY_TYPE.BODY:
                         bounds.transform.localPosition = new Vector3(0, 0, 0);
