@@ -22,7 +22,7 @@ public class TextTime : MonoBehaviour
     private void Timer()
     {
         totalTime -= Time.deltaTime;
-        _text.text = (totalTime / 60).ToString("00")+ ":" + (totalTime % 60).ToString("00");
+        _text.text = ((int)totalTime).ToString();
         if (totalTime <= 0)
         {
             SceneManager.LoadScene("ResultScene");
