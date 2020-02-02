@@ -955,7 +955,8 @@ public class OVROverlay : MonoBehaviour
 
 		// Backward compatibility: show regular renderer if overlay isn't visible.
 		if (rend)
-			rend.enabled = !isOverlayVisible;
+			//rend.enabled = !isOverlayVisible;
+			rend.enabled = true;
 	}
 
 #endregion

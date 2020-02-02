@@ -32,7 +32,6 @@ public class OVRGrabbable : MonoBehaviour
     protected Transform m_snapOffset;
     [SerializeField]
     protected Collider[] m_grabPoints = null;
-
     protected float VelEnchantVal = 3.0f;
 
     protected bool m_grabbedKinematic = false;
@@ -162,5 +161,10 @@ public class OVRGrabbable : MonoBehaviour
             // Notify the hand to release destroyed grabbables
             m_grabbedBy.ForceRelease(this);
         }
+    }
+
+    public float EnchantValueMng {
+        get { return VelEnchantVal; }
+        set { VelEnchantVal = value; }
     }
 }
