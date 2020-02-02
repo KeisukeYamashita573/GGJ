@@ -20,6 +20,10 @@ public class SnapParts : MonoBehaviour
             Debug.LogError("Rigidbodyがアタッチされていません");
             return;
         }
+        if(other.tag != "Parts")
+        {
+            return;
+        }
         rigid.useGravity = false;
         rigid.constraints = RigidbodyConstraints.FreezeAll;
         // 座標位置と回転を一致させる
