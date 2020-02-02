@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TextTime : MonoBehaviour
 {
     private Text _text;
+    private float totalTime = 270;
     private float _secondTime;
     private int _minuteTime;
 
@@ -19,13 +21,12 @@ public class TextTime : MonoBehaviour
 
     private void Timer()
     {
-        _secondTime += Time.deltaTime;
-        if(_secondTime >= 60.0f)
+        totalTime -= Time.deltaTime;
+        _text.text = (totalTime / 60).ToString("00")+ ":" + (totalTime % 60).ToString("00");
+        if (totalTime <= 0)
         {
-            _minuteTime++;
-            _secondTime -= 60.0f;
+            SceneManager.LoadScene("ResultScene");
         }
-        _text.text = _minuteTime.ToString("00")+ ":" + ((int)_secondTime).ToString("00");
     }
 
     // Update is called once per frame
