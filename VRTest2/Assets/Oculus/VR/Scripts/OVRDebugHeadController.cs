@@ -77,7 +77,7 @@ public class OVRDebugHeadController : MonoBehaviour
 		if ( AllowMovement )
 		{
 			float gamePad_FwdAxis = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).y;
-			float gamePad_StrafeAxis = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).x;
+            float gamePad_StrafeAxis = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).x;
 
 			Vector3 fwdMove = ( CameraRig.centerEyeAnchor.rotation * Vector3.forward ) * gamePad_FwdAxis * Time.deltaTime * ForwardSpeed;
 			Vector3 strafeMove = ( CameraRig.centerEyeAnchor.rotation * Vector3.right ) * gamePad_StrafeAxis * Time.deltaTime * StrafeSpeed;

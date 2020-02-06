@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class gamemng : MonoBehaviour
 {
     [SerializeField]
-    private GameObject obj;
+    private GameObject[] obj;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +15,15 @@ public class gamemng : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (obj.GetComponent<PartsAssembly>().GetRepairCount >= 6)
+        foreach(var o in obj)
         {
-            SceneManager.LoadScene("ResultScene");
+            if (o.activeInHierarchy)
+            {
+                if (o.GetComponent<PartsAssembly>().GetRepairCount >= 6)
+                {
+                    SceneManager.LoadScene("ResultScene");
+                }
+            }
         }
     }
 }
